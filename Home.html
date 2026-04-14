@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3Dfier.in | 3D Printing Pune | Viman Nagar</title>
+
+    <meta
+      name="description"
+      content="Professional 3D printing services in Viman Nagar, Pune. Precision prototyping, custom gifts, and corporate solutions by 3Dfier. Make your ideas real."
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+      }
+      .bg-brand-blue {
+        background-color: #263238;
+      }
+      .text-brand-orange {
+        color: #ff5722;
+      }
+      .bg-brand-orange {
+        background-color: #ff5722;
+      }
+      .tab-active {
+        border-bottom: 4px solid #ff5722;
+        color: #ff5722;
+      }
+
+      /* Video Container Aspect Ratio */
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+      }
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+      }
+
+      /* Carousel Smoothness */
+      .carousel-slide {
+        transition: opacity 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body id="home" class="bg-brand-blue text-white">
+    <nav class="bg-brand-blue p-4 text-white shadow-lg sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="flex items-center space-x-2">
+          <img
+            src="images/3dfier_logo.png"
+            alt="3Dfier Logo"
+            class="h-10 w-auto"
+          />
+        </a>
+        <div class="space-x-6 hidden md:flex items-center">
+          <a href="#home" class="hover:text-brand-orange transition">Home</a>
+          <a href="#work-section" class="hover:text-brand-orange transition"
+            >Our Work</a
+          >
+          <a href="#about" class="hover:text-brand-orange transition"
+            >About us</a
+          >
+          <a
+            href="https://wa.me/918605067506"
+            class="bg-brand-orange px-4 py-2 rounded font-bold hover:bg-orange-600 transition text-sm"
+            >WhatsApp Quote</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white focus:outline-none"
+          onclick="toggleMobileMenu()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex-col space-y-4 pt-4 pb-2 mt-4 border-t border-gray-700 text-center"
+      >
+        <a
+          href="#home"
+          class="block hover:text-brand-orange transition"
+          onclick="toggleMobileMenu()"
+          >Home</a
+        >
+        <a
+          href="#work-section"
+          class="block hover:text-brand-orange transition"
+          onclick="toggleMobileMenu()"
+          >Our Work</a
+        >
+        <a
+          href="#about"
+          class="block hover:text-brand-orange transition"
+          onclick="toggleMobileMenu()"
+          >About us</a
+        >
+        <a
+          href="https://wa.me/918605067506"
+          class="inline-block bg-brand-orange px-4 py-2 rounded font-bold hover:bg-orange-600 transition text-sm mt-2"
+          >WhatsApp Quote</a
+        >
+      </div>
+    </nav>
+
+    <header class="bg-brand-blue py-20 text-white">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center"
+      >
+        <img
+          src="images/3dfier_logo.png"
+          alt="3Dfier Logo"
+          class="h-24 md:h-32 w-auto mb-6 md:mb-0 md:mr-8"
+        />
+        <div class="text-center md:text-left">
+          <h2 class="text-5xl font-bold mb-4">Turning Ideas into 3D</h2>
+          <p class="text-xl opacity-80">
+            Premium 3D Printing & Prototyping in Pune
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section id="work-section" class="py-12 container mx-auto px-4">
+      <div class="flex justify-center space-x-8 mb-12 border-b border-gray-700">
+        <button
+          onclick="switchTab('gallery')"
+          id="btn-gallery"
+          class="pb-4 px-6 font-bold text-xl transition tab-active"
+        >
+          PORTFOLIO
+        </button>
+        <button
+          onclick="switchTab('social')"
+          id="btn-social"
+          class="pb-4 px-6 font-bold text-xl transition text-gray-400"
+        >
+          VIDEOS
+        </button>
+      </div>
+
+      <div id="tab-gallery" class="max-w-4xl mx-auto">
+        <div
+          class="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-800 border border-gray-700"
+        >
+          <div id="carousel-container" class="relative h-[300px] md:h-[500px]">
+            <div class="carousel-slide absolute inset-0 opacity-100">
+              <img
+                src="images/Rajputana_White.png"
+                alt="Industrial Part"
+                class="w-full h-full object-contain"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-brand-blue bg-opacity-90 p-6 text-white border-t-4 border-brand-orange"
+              >
+                <h4
+                  class="text-xl font-bold text-brand-orange uppercase tracking-wider"
+                >
+                  Industrial Prototypes
+                </h4>
+                <p class="text-sm opacity-80">
+                  High-strength functional parts printed for engineering
+                  testing.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-slide absolute inset-0 opacity-0">
+              <img
+                src="images/StonearchDetails.png"
+                alt="Multi-color Print"
+                class="w-full h-full object-contain"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-brand-blue bg-opacity-90 p-6 text-white border-t-4 border-brand-orange"
+              >
+                <h4
+                  class="text-xl font-bold text-brand-orange uppercase tracking-wider"
+                >
+                  Multi-Color Designs
+                </h4>
+                <p class="text-sm opacity-80">
+                  Vibrant, multi-material creations using the Bambu Lab AMS
+                  system.
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-slide absolute inset-0 opacity-0">
+              <img
+                src="images/Photochange.png"
+                alt="Custom Gift"
+                class="w-full h-full object-contain"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-brand-blue bg-opacity-90 p-6 text-white border-t-4 border-brand-orange"
+              >
+                <h4
+                  class="text-xl font-bold text-brand-orange uppercase tracking-wider"
+                >
+                  Custom Gifting
+                </h4>
+                <p class="text-sm opacity-80">
+                  Personalized lithophanes and unique 3D printed gifts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onclick="moveSlide(-1)"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-brand-orange p-3 rounded-full transition-all text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onclick="moveSlide(1)"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-brand-orange p-3 rounded-full transition-all text-white"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        </div>
+        <p class="text-center text-gray-400 mt-6 text-sm italic">
+          Precision in every layer, delivered across Pune.
+        </p>
+      </div>
+
+      <div id="tab-social" class="hidden">
+        <div class="text-center mb-8">
+          <p class="text-gray-300 mb-4">
+            Watch our latest prints and process videos
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div
+            class="bg-gray-800 p-2 rounded-xl shadow-md border border-gray-700"
+          >
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/ShM5e9Frqzk"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="mt-3 font-bold px-2">Bambu Lab P1S Speed Test</p>
+          </div>
+
+          <div
+            class="bg-gray-800 p-2 rounded-xl shadow-md border border-gray-700"
+          >
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/ShM5e9Frqzk"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p class="mt-3 font-bold px-2">Multi-color Printing Demo</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="https://www.youtube.com/@3dfier"
+            target="_blank"
+            class="text-brand-orange font-bold border-2 border-brand-orange px-6 py-2 rounded-full hover:bg-brand-orange hover:text-white transition"
+            >Visit YouTube Channel</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="about"
+      class="bg-gray-800 py-16 container mx-auto px-4 text-center rounded-2xl shadow-xl mb-12 border border-gray-700"
+    >
+      <h3 class="text-3xl font-bold mb-6 text-brand-orange">
+        Visit Us in Pune
+      </h3>
+      <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
+        We are located in <strong>Viman Nagar</strong>, providing
+        fast-turnaround 3D printing for engineers and makers alike.
+      </p>
+      <a
+        href="https://www.google.com/maps/place/3Dfier/data=!4m2!3m1!1s0x0:0x62a495033c17327a?sa=X&ved=1t:2428&ictx=111"
+        target="_blank"
+        class="bg-brand-orange text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg"
+        >Open in Google Maps</a
+      >
+    </section>
+
+    <footer class="bg-brand-blue text-white py-12 text-center">
+      <div class="container mx-auto px-4">
+        <p class="text-sm opacity-60">
+          © 2026 3Dfier.in | Viman Nagar, Pune | 8605067506
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Tab Switching Logic
+      function switchTab(tab) {
+        const gallery = document.getElementById("tab-gallery");
+        const social = document.getElementById("tab-social");
+        const btnG = document.getElementById("btn-gallery");
+        const btnS = document.getElementById("btn-social");
+
+        if (tab === "gallery") {
+          gallery.classList.remove("hidden");
+          social.classList.add("hidden");
+          btnG.classList.add("tab-active");
+          btnS.classList.remove("tab-active");
+          btnS.classList.add("text-gray-400");
+        } else {
+          gallery.classList.add("hidden");
+          social.classList.remove("hidden");
+          btnS.classList.add("tab-active");
+          btnG.classList.remove("tab-active");
+          btnG.classList.add("text-gray-400");
+        }
+      }
+
+      // Carousel Logic
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-slide");
+
+      function moveSlide(direction) {
+        // Hide current
+        slides[currentSlide].style.opacity = "0";
+
+        // Calculate next index
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+
+        // Show next
+        slides[currentSlide].style.opacity = "1";
+      }
+
+      // Auto-play Carousel every 5 seconds
+      setInterval(() => moveSlide(1), 5000);
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          menu.classList.add("flex");
+        } else {
+          menu.classList.add("hidden");
+          menu.classList.remove("flex");
+        }
+      }
+    </script>
+  </body>
+</html>
